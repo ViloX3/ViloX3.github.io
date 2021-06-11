@@ -5,15 +5,15 @@
   <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
   <body style="margin : 0px; overflow: hidden;">
     <a-scene embedded arjs>
-        <a-asset-item id="tree-obj-1"  src="https://github.com/ViloX3/ViloX3.github.io/blob/main/models/Carter.obj"></a-asset-item>
-        <a-asset-item  id="tree-mtl-1" src="https://github.com/ViloX3/ViloX3.github.io/blob/main/models/Carter.mtl"></a-asset-item>
+        <a-assets>
+            <a-asset-item id="carter-obj" src="../models/Carter.obj"></a-asset-item>
+            <a-asset-item id="carter-mtl" src="../models/Carter.mtl"></a-asset-item>
+        </a-assets>
+    <!-- Using the asset management system. -->
+    
 
       <a-marker preset="hiro">
-        <a-entity
-          position="0 0 0"
-          scale="0.05 0.05 0.05"
-          gltf-model="https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/AR-js-org/AR.js/master/aframe/examples/image-tracking/nft/trex/scene.gltf"
-        ></a-entity>
+          <a-entity position="0 0 0" scale="0.05 0.05 0.05" obj-model="obj: #carter-obj; mtl: #carter-mtl"></a-entity>
       </a-marker>
       <a-entity camera></a-entity>
     </a-scene>
