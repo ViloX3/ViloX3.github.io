@@ -16,12 +16,10 @@
           <a-entity position="0 0 0" scale="0.01 0.01 0.01" obj-model="obj: #carter-obj; mtl: #carter-mtl"></a-entity>
       </a-marker>
       <a-entity camera></a-entity>
+      <a-entity id="basicText" position='0 0 0' scale='1 1 1' color='red' text='value: Hello World;'></a-entity>
     </a-scene>
-    <div id="Target_div"></div>
-    <script>
-      var div = document.getElementById('target_div');
-
-      div.innerHTML += 'hello world !';
-    </script>
+    <div >
+      <span id="myText" style='z-index: 1; color: white; position: fixed; left: 50px; bottom: 10px;'>Add some text here.</span>
+    </div>
   </body>
 </html>
